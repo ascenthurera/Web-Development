@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Abu Hurera - Portfolio</title>
+
+    <style>
+        .project-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+
+        .project-card {
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .project-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .project-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .project-type {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+            text-decoration: dashed;
+        }
+        .project-description {
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            padding: 0 10px;
+        }
+        .tags {
+            margin-top: 10px;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #eee;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            margin: 0 5px;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 200vh;
+            margin: 0 auto;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .header {
+            width: 100%;
+            height: 100px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 50px;
+            background-color: #555;
+        }
+
+        .menu {
+            margin-left: 15%;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            float: left;
+            text-align: center;
+            height: 50px;
+            width: 150px;
+            background-color: black;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #f0f0f0;
+            display: block;
+            line-height: 50px;
+            font-size: 18px;
+            transition: 0.3s; 
+        }
+
+        .navbar ul li a:hover {
+            color: #FDDE59;
+        }
+
+        .main {
+            clear: both;
+            padding-top: 50px;
+            text-align: center; 
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover; 
+            display: block;
+            margin: 0 auto 20px auto;
+        }
+
+        .hello {
+            font-size: 30px;
+            color: black;
+        }
+
+        .name {
+            font-size: 50px;
+            font-weight: 700;
+            color: #FDDE59;
+            margin: 10px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3); 
+        }
+
+        .designation {
+            font-size: 20px;
+            color: black;
+            font-weight: 600;
+        }
+
+        .description {
+            font-size: 18px;
+            margin: 10px auto 20px auto;
+            width: 50%;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .button {
+            margin-top: 20px;
+            margin-bottom: 50px; 
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #FDDE59;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 0 10px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #333;
+            color: #FDDE59;
+        }
+
+        .row-1 {
+            width: 100%;
+            background-color: #FFDE59;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        .left-img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 50px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .write-text {
+            max-width: 500px;
+            text-align: left;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .about-stats {
+            width: 100%;
+            background-color: #F2F2F2;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        .about-stats > div {
+            text-align: center;
+        }
+
+        .stats-number {
+            font-size: 45px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .stats-label {
+            font-size: 18px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>Welcome to My Website</h1>
+        </header>
+        
+        <div class="navbar">
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            
+            <img src="hurera.jpg" alt="Hurera Avatar" class="profile-img">
+            <div class="hello">Hello I am</div>
+            <div class="name">Muhammad Abu Hurera</div>
+            <div class="designation">Web Developer & AI Enthusiast</div>
+            <p class="description">I am a passionate web developer creating interactive and modern websites.</p>
+            
+            <div class="button">
+                <a href="#" class="btn">View my work</a>
+                <a href="#" class="btn">Contact me</a>
+            </div>
+
+            <div class="row-1">
+                <img src="hurera.png" alt="About Me Image" class="left-img">
+                
+                <div class="write-text">
+                    <h2>Introduction</h2>
+                    <h3>Building the future, <br>one model at a time</h3>
+                    <p>I am a final-year BSCS student at Virtual University of Pakistan. 
+                        I have a deep passion for Artificial Intelligence and Web Development. 
+                        Beyond coding, I strongly believe in continuous growth, focusing on leadership, 
+                        problem-solving, effective communication, and maintaining high professionalism in all my work.</p>
+                </div>
+            </div>
+
+            <div class="about-stats">
+                <div>
+                    <div class="stats-number">10+</div>
+                    <div class="stats-label">Projects Completed</div>
+                </div>
+                <div>
+                    <div class="stats-number">3+</div>
+                    <div class="stats-label">Years of Experience</div>
+                </div>
+                <div>
+                    <div class="stats-number">5+</div>
+                    <div class="stats-label">Certifications</div>
+                </div>
+            </div>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="project1.png" alt="Project 1" class="project-icon">
+                    <div class="project-title">Project One</div>
+                    <div class="project-type">Web Development</div>
+                    <p class="project-description">A modern responsive website built with HTML, CSS, and JavaScript.</p>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project2.png" alt="Project 2" class="project-icon">
+                    <div class="project-title">Project Two</div>
+                    <div class="project-type">AI & Machine Learning</div>
+                    <p class="project-description">An AI model that predicts housing prices with high accuracy.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">Data Science</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project2.png" alt="Project 3" class="project-icon">
+                    <div class="project-title">Project Three</div>
+                    <div class="project-type">Networking and Cloud Computing</div>
+                    <p class="project-description">To manage the system and Network administration.</p>
+                    <div class="tags">
+                        <span class="tag">Cisco</span>
+                        <span class="tag">Windows Server</span>
+                        <span class="tag">Virtualization</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project2.png" alt="Project 4" class="project-icon">
+                    <div class="project-title">Project Four</div>
+                    <div class="project-type">Python Development</div>
+                    <p class="project-description">A Python application for data analysis and visualization.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Matplotlib</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
