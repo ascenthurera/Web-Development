@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.box {
+  width: calc(50% - 5px); 
+  height: 100px;
+  background-color: rgb(78, 50, 218);
+}
